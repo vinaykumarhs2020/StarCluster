@@ -1,4 +1,19 @@
 ===================
+Modifications
+===================
+Changed node.py to support Ubuntu 14.04
+
+Background: portmap (used in earlier StarCluster) us changed to rpcbind. You can either do:
+ln -s /lib/init/upstart-job /etc/init.d/portmap
+ln -s /lib/init/upstart-job /etc/init.d/portmap-wait
+
+as suggested here: https://github.com/jtriley/StarCluster/issues/453
+
+or modify node.py to start rpcbind.
+
+* This version also support C4.XXX instances!
+---------- Original Readme ------------
+===================
 StarCluster v0.95.6
 ===================
 :StarCluster: Cluster Computing Toolkit for the Cloud
